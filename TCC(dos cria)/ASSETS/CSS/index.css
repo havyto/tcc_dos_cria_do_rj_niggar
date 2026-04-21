@@ -3,6 +3,11 @@
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none; /* Remove o sublinhado */
+    color: white;         /* Faz o link herdar a cor do texto ao redor */
+}
+
 
 body {
     font-family: 'Arial', sans-serif;
