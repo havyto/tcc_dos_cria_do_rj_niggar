@@ -1,20 +1,56 @@
-document.addEventListener("DOMContentLoaded", () => {
+const btn = document.getElementById("menu-btn");
+const menu = document.getElementById("menu");
 
-    const btn = document.getElementById("ler-mais");
-    const texto = document.getElementById("texto-desc");
+// Criar overlay
+const overlay = document.createElement('div');
+overlay.className = 'overlay';
+document.body.appendChild(overlay);
 
-    var aberto = false;
+// Abrir/fechar menu
+btn.addEventListener("click", (e) => {
+    e.stopPropagation();
+    menu.classList.toggle("ativo");
+    overlay.classList.toggle("ativo");
+    
+    if (menu.classList.contains('ativo')) {
+        btn.innerHTML = '✕';
+        btn.style.transform = 'rotate(90deg)';
+    } else {
+        btn.innerHTML = '☰';
+        btn.style.transform = 'rotate(0deg)';
+    }
+});
 
-    btn.addEventListener("click", () => {
-        if (!aberto) {
-            texto.textContent += " Aqui está a descrição completa...";
-            btn.textContent = "Mostrar menos";
-        } else {
-            texto.textContent = "Um jogo cheio de ação...";
-            btn.textContent = "Ler mais";
-        }
+// Fechar ao clicar no overlay
+overlay.addEventListener('click', () => {
+    menu.classList.remove('ativo');
+    overlay.classList.remove('ativo');
+    btn.innerHTML = '☰';
+    btn.style.transform = 'rotate(0deg)';
+});
 
-        aberto = !aberto;
+// Fechar com ESC
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && menu.classList.contains('ativo')) {
+        menu.classList.remove('ativo');
+        overlay.classList.remove('ativo');
+        btn.innerHTML = '☰';
+        btn.style.transform = 'rotate(0deg)';
+    }
+});
+
+// Impedir fechamento ao clicar dentro do menu
+menu.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+// Animação dos cards (opcional)
+const cards = document.querySelectorAll('.game-card');
+cards.forEach(card => {
+    card.addEventListener('click', () => {
+        card.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+            card.style.transform = '';
+        }, 200);
     });
-
 });
