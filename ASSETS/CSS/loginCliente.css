@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+}
+
 body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
@@ -12,10 +17,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-a{
-    text-decoration: none; /* Remove o sublinhado */
-    color: white;         /* Faz o link herdar a cor do texto ao redor */
 }
 
 /* Menu - mesmo estilo do index */
@@ -290,40 +291,15 @@ a{
         font-size: 24px;
     }
 }
-
-/* Ajuste do header */
-.header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Barra de pesquisa */
-.search-box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.search-box input {
-    width: 60%;
-    max-width: 400px;
-    padding: 10px 15px;
-    border-radius: 25px;
-    border: 1px solid #ab58bc;
-    background: rgba(255,255,255,0.05);
-    color: white;
-    outline: none;
-    transition: 0.3s;
-}
-
-/* Efeito ao clicar */
-.search-box input:focus {
-    border-color: #ab58bc;
-    box-shadow: 0 0 10px #ab58bc80;
-}
-
-/* Placeholder */
-.search-box input::placeholder {
-    color: #aaa;
+footer {
+    background-color: #0f0f1a;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+    border-top: 1px solid #ab58bc;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
