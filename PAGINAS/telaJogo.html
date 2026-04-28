@@ -1,115 +1,79 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ghost Gamer - Jogo</title>
-    <link rel="stylesheet" href="../ASSETS/CSS/telaJogo.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ghost Gamer - Jogo</title>
+<link rel="stylesheet" href="../ASSETS/CSS/jogo.css">
 </head>
 <body>
 
 <!-- HEADER -->
 <header class="header">
+
     <button id="menu-btn">☰</button>
 
-    <input type="text" placeholder="Pesquisar..." class="search-bar">
+    <div class="search-box">
+        <input type="text" placeholder="Buscar jogos...">
+    </div>
 
-    <button class="cart-btn">Carrinho</button>
+    <div class="header-right">
+        <button class="cart-btn">🛒</button>
+
+        <div class="logo-container">
+            <img src="../ASSETS/IMG/logo.png.png" class="logo-img">
+            <span class="logo-text">GHOST GAMER</span>
+        </div>
+    </div>
+
 </header>
 
-<!-- MENU -->
-<nav id="menu" class="menu">
-    <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="biblioteca.html">Biblioteca</a></li>
-        <li><a href="categoria.html">Categoria</a></li>
-    </ul>
-</nav>
-
 <!-- CONTEÚDO -->
-<main class="game-page">
+<section class="game-layout">
 
-    <!-- TOPO -->
-    <section class="top-section">
+    <!-- IMAGEM -->
+    <div class="game-image"></div>
 
-        <!-- IMAGEM DO JOGO -->
-        <div class="game-image">
-            <img src="../ASSETS/IMG/exemplo-jogo.jpg" alt="Jogo">
-        </div>
+    <!-- LATERAL COMPRA -->
+    <div class="game-buy">
+        <button class="buy-btn">COMPRAR</button>
+        <button class="wishlist-btn">Lista de desejos</button>
 
-        <!-- LATERAL -->
-        <div class="game-side">
-            <button class="buy-btn">Comprar</button>
+        <p>👨‍💻 Desenvolvedor: Ghost Studio</p>
+        <p>💻 Plataforma: PC</p>
+    </div>
 
-            <button>Lista de desejos</button>
+    <!-- DESCRIÇÃO -->
+    <div class="game-description">
+        <h3>Descrição</h3>
+        <p id="desc-text">
+            Um jogo cheio de ação com combates intensos e progressão dinâmica...
+        </p>
+        <button id="read-more">Ler mais</button>
 
-            <div class="info-box">
-                <p><strong>Desenvolvedor:</strong> Studio X</p>
-                <p><strong>Plataformas:</strong> PC, PS5</p>
-            </div>
-        </div>
+        <h4>Expansões</h4>
+        <p>DLC 1, DLC 2</p>
+    </div>
 
-    </section>
-
-    <!-- MEIO -->
-    <section class="middle-section">
-
-        <!-- DESCRIÇÃO -->
-        <div class="description">
-            <h2>Descrição do jogo</h2>
-            <p id="desc-text">
-                Um jogo incrível cheio de ação, aventura e desafios.
-                Explore mundos incríveis e enfrente inimigos poderosos...
-            </p>
-            <button id="read-more">Leia mais</button>
-
-            <h3>Expansões</h3>
-            <ul>
-                <li>DLC 1</li>
-                <li>DLC 2</li>
-            </ul>
-        </div>
-
-        <!-- IDIOMAS -->
-        <div class="languages">
-            <h3>Idiomas</h3>
-            <ul>
-                <li>Português</li>
-                <li>Inglês</li>
-                <li>Espanhol</li>
-            </ul>
-        </div>
-
-    </section>
+    <!-- IDIOMAS -->
+    <div class="game-languages">
+        <h3>Idiomas</h3>
+        <p>Português, Inglês, Espanhol</p>
+    </div>
 
     <!-- REQUISITOS -->
-    <section class="requirements">
-        <h2>Requisitos para jogar</h2>
+    <div class="game-requirements">
+        <h3>Requisitos</h3>
+        <p>Mínimo: 8GB RAM, GTX 750</p>
+        <p>Recomendado: 16GB RAM, GTX 1660</p>
+    </div>
 
-        <div class="req-grid">
-            <div>
-                <h4>Mínimos</h4>
-                <p>CPU: i3</p>
-                <p>RAM: 8GB</p>
-                <p>GPU: GTX 750</p>
-            </div>
-
-            <div>
-                <h4>Seu PC</h4>
-                <p>CPU: i5</p>
-                <p>RAM: 16GB</p>
-                <p>GPU: GTX 1650</p>
-            </div>
-        </div>
-    </section>
-
-</main>
+</section>
 
 <footer>
     <p>© 2026 - Ghost Gamer</p>
 </footer>
 
 <script src="../ASSETS/JS/jogo.js"></script>
-
 </body>
 </html>
