@@ -266,3 +266,39 @@ footer {
 .overlay.ativo {
     display: block;
 }
+/* Ajuste do header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Barra de pesquisa */
+.search-box {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.search-box input {
+    width: 60%;
+    max-width: 400px;
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #ab58bc;
+    background: rgba(255,255,255,0.05);
+    color: white;
+    outline: none;
+    transition: 0.3s;
+}
+
+/* Efeito ao clicar */
+.search-box input:focus {
+    border-color: #ab58bc;
+    box-shadow: 0 0 10px #ab58bc80;
+}
+
+/* Placeholder */
+.search-box input::placeholder {
+    color: #aaa;
+}
